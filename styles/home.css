@@ -809,7 +809,7 @@ ins {
 .wf-top__hero {
   max-width: 70rem;
   margin: 0 auto;
-  padding: 4rem 1.25rem 3.75rem;
+  padding: 4rem 5.5rem 3.75rem;
   text-align: center; /* 제목 가운데정렬 핵심 */
 }
 
@@ -825,7 +825,7 @@ ins {
   width: 0.125rem;
   height: 7rem; /* ✅ 여기 고침 (원래 네 의도대로) */
   background: rgba(0, 0, 0, 0.25);
-  margin: 1.5rem auto;
+  margin: 1.3rem auto;
 }
 
 .wf-top__sub {
