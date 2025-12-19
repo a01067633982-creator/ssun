@@ -1,0 +1,294 @@
+@use "./global/base";
+@use "./compositions";
+@use "./utilities";
+
+.grid-wrapper {
+  --gutter: var(--space-s-2xl);
+}
+
+/* -------------------- TOP -------------------- */
+.wf-top {
+  background: #d5d6cc;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.wf-top__kicker {
+  margin: 0;
+  padding: 1.125rem 1.25rem 0.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.wf-top__kicker::after {
+  content: "";
+  display: block;
+  width: min(60rem, calc(100% - 2.5rem));
+  height: 1px;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 0.75rem auto 0;
+}
+
+.wf-top__hero {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 4rem 1.25rem 3.75rem;
+  text-align: center; /* 제목 가운데정렬 핵심 */
+}
+
+.wf-top__title {
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: clamp(2.125rem, 4.6vw, 3.75rem);
+  line-height: 1.12;
+}
+
+.wf-top__stem {
+  width: 0.125rem;
+  height: 7rem; /* ✅ 여기 고침 (원래 네 의도대로) */
+  background: rgba(0, 0, 0, 0.25);
+  margin: 1.5rem auto;
+}
+
+.wf-top__sub {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  font-weight: 600;
+}
+
+/* -------------------- NAV3 -------------------- */
+/* ✅ nav3는 아래(컨텐츠)와 폭 맞추려면 max-width 걸어야 함 */
+.nav3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+
+  background: #e5e6dd;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+
+.nav3__item {
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.nav3__item + .nav3__item {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.nav3__title {
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: clamp(1.25rem, 1.6vw, 1.625rem);
+}
+
+.nav3__desc {
+  margin: 0.75rem 0 0;
+  line-height: 2;
+  opacity: 0.75;
+  font-size: clamp(0.95rem, 1.1vw, 1.125rem);
+}
+
+/* -------------------- CHAPTER -------------------- */
+:root {
+  --stroke: 0.0625rem;
+  --stroke-color: rgba(0, 0, 0, 0.25);
+  --img-bg: #e5e6dd;
+}
+
+.chapter {
+  max-width: 70rem;
+  margin: 0 auto 6rem;
+  padding: 2.5rem 1.25rem;
+  border-bottom: var(--stroke) solid var(--stroke-color);
+
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 2.5rem;
+
+  grid-template-areas:
+    "thumb hero"
+    "text  hero";
+
+  align-items: start;
+}
+
+.chapter__thumb {
+  grid-area: thumb;
+  background: var(--img-bg);
+  width: 100%;
+  height: 4.5rem;
+}
+
+.chapter__hero {
+  grid-area: hero;
+  background: var(--img-bg);
+  width: 100%;
+  min-height: 24rem;
+
+  /* ✅ 이미지가 너무 크게 들어가는 문제 해결 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.chapter__side {
+  display: none;
+}
+
+.chapter__text {
+  grid-area: text;
+}
+
+.chapter__num {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.chapter__title {
+  margin: 0 0 1rem;
+  font-size: 3.25rem;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+
+.chapter__body {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 32rem;
+}
+
+.chapter--reverse {
+  grid-template-columns: 1.25fr 1fr;
+  grid-template-areas:
+    "hero  thumb"
+    "hero  text";
+}
+
+/* -------------------- CLOSING / FOOTER -------------------- */
+.closing {
+  border-top: var(--stroke) solid var(--stroke-color);
+  background: #d5d6cc;
+}
+
+.closing__statement {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 3rem 1.25rem;
+}
+
+.closing__dot {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 0.125rem;
+  margin-bottom: 1rem;
+}
+
+.closing__title {
+  margin: 0 0 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.closing__text {
+  margin: 0;
+  max-width: 40rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  opacity: 0.85;
+}
+
+.site-footer {
+  border-top: var(--stroke) solid var(--stroke-color);
+  padding: 2rem 1.25rem;
+  text-align: center;
+  font-size: 0.875rem;
+  opacity: 0.7;
+}
+
+/* -------------------- MOBILE -------------------- */
+@media (max-width: 45rem) {
+  .wf-top__hero {
+    padding: 2.5rem 1.25rem 2.5rem;
+  }
+
+  .wf-top__stem {
+    height: 5rem;
+  }
+
+  .nav3 {
+    grid-template-columns: 1fr;
+  }
+
+  .nav3__item + .nav3__item {
+    border-left: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+
+  .chapter {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    grid-template-areas:
+      "hero"
+      "text";
+  }
+
+  .chapter__thumb {
+    display: none;
+  }
+
+  .chapter__hero {
+    min-height: 22rem;
+  }
+
+  .chapter__title {
+    font-size: 2.25rem;
+  }
+
+  .chapter__body {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .chapter--reverse {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "text";
+  }
+}
+
+/* -------------------- CHAPTER IMAGES -------------------- */
+/* ✅ 이거 쓰려면 HTML에 chapter--1~4 클래스가 "반드시" 있어야 함 */
+.chapter--1 .chapter__hero {
+  background-image: url("../images/image-.jpg");
+}
+.chapter--2 .chapter__hero {
+  background-image: url("../images/image--.jpg");
+}
+.chapter--3 .chapter__hero {
+  background-image: url("../images/image---.jpg");
+}
+.chapter--4 .chapter__hero {
+  background-image: url("../images/image----.jpg");
+}
+
+body {
+  background: #e5e6dd;
+}

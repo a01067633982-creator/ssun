@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout Examples</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+    />
+    <link rel="stylesheet" href="./styles/home.css" />
+  </head>
+  <body>
+    <main class="main | grid-wrapper">
+      <!-- TOP(Hero) -->
+      <header class="wf-top" id="top">
+        <p class="wf-top__kicker">Fictional feelings are real.</p>
+
+        <div class="wf-top__hero">
+          <h1 class="wf-top__title">
+            왜 우리는 인간형 캐릭터에게도<br />
+            사랑을 느끼는가
+          </h1>
+
+          <div class="wf-top__stem" aria-hidden="true"></div>
+
+          <p class="wf-top__sub">
+            허구라는 사실을 알면서도, 우리는 그들에게 감정을 건넨다.
+          </p>
+        </div>
+      </header>
+
+      <!-- 3-column nav -->
+      <nav class="nav3" aria-label="핵심 섹션">
+        <a class="nav3__item" href="#sec1">
+          <p class="nav3__title">How the Brain<br />Sees Characters</p>
+          <p class="nav3__desc">뇌는 왜 가상을<br />사람처럼 받아들이는가</p>
+        </a>
+
+        <a class="nav3__item" href="#sec2">
+          <p class="nav3__title">Why We Feel<br />Attached</p>
+          <p class="nav3__desc">가상 존재에게도<br />애정을 느끼는 이유</p>
+        </a>
+
+        <a class="nav3__item" href="#sec3">
+          <p class="nav3__title">Characters as<br />Emotional Support</p>
+          <p class="nav3__desc">
+            캐릭터는 어떻게<br />심리적 안정의 역할을 하는가
+          </p>
+        </a>
+      </nav>
+
+      <section class="chapter chapter--1" id="sec1">
+        <div class="chapter__thumb" aria-hidden="true"></div>
+
+        <!-- 데스크탑 오른쪽 큰 이미지 / 모바일에서는 맨 위로 올라감 -->
+        <div
+          class="chapter__hero"
+          aria-hidden="true"
+          style="background-image: url(images/image-.jpg)"
+        ></div>
+
+        <!-- 모바일에서만 쓰는 세로 이미지 자리(데스크탑 숨김) -->
+        <div class="chapter__side" aria-hidden="true"></div>
+
+        <div class="chapter__text">
+          <p class="chapter__num">1</p>
+          <h2 class="chapter__title">얼굴을 읽는 뇌의 본능</h2>
+          <p class="chapter__body">
+            인간의 뇌는 얼굴과 인간의 형태에 매우 민감하다. 단순한 그래픽이라도
+            눈·코·입의 구조를 갖추면, 뇌는 이를 실제 사람처럼 해석한다. 이 순간
+            캐릭터는 이미지가 아닌 '사회적 존재'가 된다.
+          </p>
+        </div>
+      </section>
+
+      <section class="chapter chapter--reverse chapter--2">
+        <!-- 데스크탑에서는 왼쪽 위 작은 썸네일 / 모바일에서는 숨김 -->
+        <div class="chapter__thumb" aria-hidden="true"></div>
+
+        <!-- 데스크탑 오른쪽 큰 이미지 / 모바일에서는 맨 위로 올라감 -->
+        <div class="chapter__hero" aria-hidden="true"></div>
+
+        <!-- 모바일에서만 쓰는 세로 이미지 자리(데스크탑 숨김) -->
+        <div class="chapter__row"></div>
+        <div class="chapter__side" aria-hidden="true"></div>
+
+        <div class="chapter__text">
+          <p class="chapter__num">2</p>
+          <h2 class="chapter__title">자동으로 작동하는 공감 능력</h2>
+          <p class="chapter__body">
+            인간은 타인의 감정과 의도를 추론하는 능력을 가지고 있다. 이 능력은
+            실제 사람뿐 아니라, 움직임과 표정을 가진 대상에게도 작동한다.
+            캐릭터의 미묘한 변화는 감정으로 읽히고, 우리는 자연스럽게 그들에게
+            공감한다.
+          </p>
+        </div>
+      </section>
+
+      <section class="chapter chapter--3" id="sec1">
+        <div class="chapter__thumb" aria-hidden="true"></div>
+
+        <!-- 데스크탑 오른쪽 큰 이미지 / 모바일에서는 맨 위로 올라감 -->
+        <div class="chapter__hero" aria-hidden="true"></div>
+
+        <!-- 모바일에서만 쓰는 세로 이미지 자리(데스크탑 숨김) -->
+        <div class="chapter__side" aria-hidden="true"></div>
+
+        <div class="chapter__text">
+          <p class="chapter__num">3</p>
+          <h2 class="chapter__title">진짜를 구분하지 않는 뇌</h2>
+          <p class="chapter__body">
+            호감과 설렘을 느낄 때 활성화되는 뇌의 보상 시스템은 가상 캐릭터를 볼
+            때도 유사하게 반응한다. 뇌는 대상의 실재 여부보다, 그 감정이 나에게
+            의미가 있는지에 반응한다.
+          </p>
+        </div>
+      </section>
+
+      <section class="chapter chapter--reverse chapter--4">
+        <!-- 데스크탑에서는 왼쪽 위 작은 썸네일 / 모바일에서는 숨김 -->
+        <div class="chapter__thumb" aria-hidden="true"></div>
+
+        <!-- 데스크탑 오른쪽 큰 이미지 / 모바일에서는 맨 위로 올라감 -->
+        <div class="chapter__hero" aria-hidden="true"></div>
+
+        <!-- 모바일에서만 쓰는 세로 이미지 자리(데스크탑 숨김) -->
+        <div class="chapter__row"></div>
+        <div class="chapter__side" aria-hidden="true"></div>
+
+        <div class="chapter__text">
+          <p class="chapter__num">4</p>
+          <h2 class="chapter__title">동일시와 위로</h2>
+          <p class="chapter__body">
+            사람은 자신과 닮은 캐릭터, 혹은 되고 싶은 모습을 캐릭터에 투영한다.
+            그 순간 캐릭터는 타인이 아니라, 나의 일부가 된다. 우리가 캐릭터를
+            사랑하는 일은, 결국 나 자신을 이해하는 방식이기도 하다.
+          </p>
+        </div>
+      </section>
+      <section class="closing">
+        <div class="closing__statement">
+          <span class="closing__dot" aria-hidden="true"></span>
+          <h2 class="closing__title">Fictional feelings are real</h2>
+
+          <p class="closing__text">
+            끝이 보이지 않는 문장들이 연결되며 이야기의 방향성은 특별히 정해지지
+            않은 채 흘러가고, 어느 한 지점에서도 의미를 찾으려 하면 자연스럽게
+            흩어져 사라진다. 이렇게 만들어진 텍스트는 독자가 무엇을 이해해야
+            하는지 고민할 필요 없이, 감정이 흐르는 방식 자체를 경험하게 한다.
+          </p>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <p>© 2025 Web Project by seon</p>
+      </footer>
+    </main>
+  </body>
+</html>

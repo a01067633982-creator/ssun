@@ -1,0 +1,70 @@
+@use "./config" as config;
+@use "../../node_modules/utopia-core-scss/src/utopia" as utopia;
+
+:root {
+  /* 1) 320 ~ 600 : base 16→18, scale 1.2 */
+  @include utopia.generateTypeScale(
+    (
+      "minWidth": 320,
+      "maxWidth": 600,
+      "minFontSize": 16,
+      "maxFontSize": 18,
+      "minTypeScale": 1.2,
+      "maxTypeScale": 1.2,
+      "positiveSteps": 5,
+      "negativeSteps": 2,
+      "prefix": "step-",
+      "relativeTo": "viewport-width",
+    )
+  );
+
+  --leading-2xs: 1;
+  --leading-xs: 1.2;
+  --leading-s: 1.4;
+  --leading-m: 1.6;
+  --leading-l: 1.8;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  --font-black: 900;
+}
+
+/* 2) 600 ~ 1280 : base 18→20, scale 1.2 */
+@media (min-width: 37.5rem) {
+  :root {
+    @include utopia.generateTypeScale(
+      (
+        "minWidth": 600,
+        "maxWidth": 1280,
+        "minFontSize": 18,
+        "maxFontSize": 20,
+        "minTypeScale": 1.2,
+        "maxTypeScale": 1.2,
+        "positiveSteps": 5,
+        "negativeSteps": 2,
+        "prefix": "step-",
+        "relativeTo": "viewport-width",
+      )
+    );
+  }
+}
+
+/* 3) 1280 ~ 1600 : base 20→21, scale 1.25 */
+@media (min-width: 80rem) {
+  :root {
+    @include utopia.generateTypeScale(
+      (
+        "minWidth": 1280,
+        "maxWidth": 1600,
+        "minFontSize": 20,
+        "maxFontSize": 21,
+        "minTypeScale": 1.25,
+        "maxTypeScale": 1.25,
+        "positiveSteps": 5,
+        "negativeSteps": 2,
+        "prefix": "step-",
+        "relativeTo": "viewport-width",
+      )
+    );
+  }
+}
